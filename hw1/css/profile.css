@@ -1,0 +1,45 @@
+.profile{
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.profile_picture{
+    height: 200px;
+    width: 200px;
+}
+
+.info_utente{
+    color: whitesmoke;
+    margin: 5px;
+}
+
+#account_container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#conferma_cambio_foto{
+    width: 30%;
+}
+
+#form_cambio_foto{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 400px){
+    h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    label{
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 5px;
+    }
+}

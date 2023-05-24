@@ -1,0 +1,215 @@
+/*form{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 5px 0;
+    font-size: 5px;
+    width: 100%;
+}
+
+input[type=submit], input[type=text], input[type=password], input[type=date]{
+    margin-left: 0.5em;
+    height: 50px;
+    font-size: 85%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+    font-family: Helvetica;
+}
+
+input[type=submit]:hover{
+    border: 2px solid black}
+
+main{
+    margin-top: 100px;
+    height: 370px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: Helvetica;
+    color: whitesmoke
+}
+
+.error{
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+
+#registration{
+    display: flex;
+    width: 46%;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 13.8px;
+}
+
+a{
+    color: rgb(5, 78, 173);
+}
+
+#logo{
+    color: white;
+    font-size: 50px;
+    margin-top: 40px;
+}
+
+.registrazione{
+    color: whitesmoke;
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+    text-align: center;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 400px){
+    main{
+        width: 390px;
+        margin:50px;
+        border: 0px;
+    }
+
+    #registration{
+        font-size: 72%;
+    }
+
+    
+
+}*/
+
+  h1{
+    color: whitesmoke;
+  }
+  label{
+    color: whitesmoke;
+  }
+  #logo{
+    font-size: 44px;
+    font-weight: bold;
+    border-bottom: 1px solid #d9dadc;
+    padding: 25px 0 25px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+main{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    border: 1px solid #d9dadc;
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .name, .surname, .username, .email, .password, .confirm_password, .fileupload{
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.allow{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.allow input{
+    width: 20px;
+    height: 20px;
+}
+
+.allow label{
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+form img{
+    opacity: 0;
+    width: 10px;
+    margin-right: 10px;
+}
+
+form span {
+    opacity: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    transition: opacity 0.3s ease;
+}
+
+.errorj label {
+    color: #d01b2d;
+}
+
+.errorj span {
+    opacity: 1;
+    font-size: 14px;
+    color: #d01b2d;
+}
+
+.errorj img {
+    opacity: 1;
+}
+
+.errorj input, .errorj #upload {
+    border-color: #d01b2d;
+}
+
+.submit input{
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 16px 14px 18px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: black;
+    background-color: whitesmoke;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+.submit input:hover{
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.signup{
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: whitesmoke;
+}

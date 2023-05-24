@@ -1,0 +1,124 @@
+h1{
+    color: whitesmoke;
+    font-family: Helvetica;
+}
+
+article.watchlist{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.watchlistContainer{
+    padding: 10px;
+    background-color: black;
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+.watchlistContainer:hover{
+    opacity: 60%;
+}
+
+.watchlistImg{
+    width: 85%;
+    height: 85%;
+}
+
+.watchlistText{
+    color: whitesmoke;
+    height: 30%;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*STILE DELLA MODALE*/
+
+#modal-view{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-view.hidden{
+    display: none;
+}
+
+/*POST NELLA MODALE*/
+
+.post_container{
+    display: flex;
+    width: 60%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: grey;
+    margin-top: 50px;
+    color: rgb(53, 52, 49);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filmImage{
+    max-width: 50%;
+    max-height: 90%;
+}
+
+.descriptionContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    max-height: 100%;
+    margin-left: 20px;
+}
+
+.imgText{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+}
+
+p{
+    font-size: 100%;
+}
+
+h2{
+    
+    margin: 1% 0 1% 0;
+}
+
+h4{
+    
+    margin: 1% 0 1% 0;
+}
+
+@media (max-width: 400px){
+    article.watchlist{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #modal-view{
+        max-width: 100vw;
+        max-width: 100vh;
+        top: 55px;
+    }
+
+    
+}
+
+

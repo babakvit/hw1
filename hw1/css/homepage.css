@@ -1,0 +1,188 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*CSS CHE RIGUARDA NAV*/
+
+
+
+/*PARTE CENTRALE: ARTICLE*/
+
+article{
+    height: 100vh;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    height: auto;
+    width: 70%;
+    padding: 20px;
+    border: 3px solid white;
+    margin: 40px;
+}
+
+/*POST SULLA PAGINA*/
+
+.post_container{
+    display: flex;
+    width: 60%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: grey;
+    margin-top: 50px;
+    color: rgb(53, 52, 49);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filmImage{
+    max-width: 50%;
+    max-height: 90%;
+}
+
+.descriptionContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    max-height: 100%;
+    margin-left: 20px;
+}
+
+.containerLikeComment{
+    width: 100%;
+    display: flex;
+    height: 9%;
+    justify-content: end;
+}
+
+.imgText{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+}
+
+.likeCommento{
+    margin-right: 15px;
+}
+
+p{
+    font-size: 100%;
+}
+
+h2{
+    
+    margin: 1% 0 1% 0;
+}
+
+h4{
+    
+    margin: 1% 0 1% 0;
+}
+
+.expandText{
+    margin-top: 30px;
+    
+}
+
+/*PARTE DEI COMMENTI*/
+
+.divLasciaCommento{
+    align-self: center;
+}
+
+.tastoPostaCommento{
+    max-width: 30%;
+    max-height: 30px;
+    align-self: flex-end;
+}
+
+input[type=submit].tastoPostaCommento:hover{
+    border: 1px solid black;
+}
+
+.commentoForm{
+    width: 60%;
+    display: flex;
+    align-self: center;
+}
+
+.corpoCommento{
+    height: 50px;
+}
+
+.username_date{
+    display: flex;
+}
+
+.username_date div{
+    margin-right: 5px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.div_commento p{
+    color: whitesmoke;
+}
+
+.div_commento{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: rgb(53, 52, 52);
+    margin: 5px 0 5px 0;
+    padding: 3px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+@media (max-width: 400px){
+    nav{
+        display: none;
+    }
+
+    .post_container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .imgText{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .filmImage{
+        max-width: 90%;
+    }
+
+    h2{
+        width: 145%;
+        align-self: flex-end;
+    }
+
+    h4{
+        width: 145%;
+        align-self: flex-end;
+    }
+
+    .descriptionContainer p{
+        width: 145%;
+        align-self: flex-end;
+       
+    }
+
+
+
+
+}
+
+
