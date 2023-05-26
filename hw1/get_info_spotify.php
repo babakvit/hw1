@@ -1,8 +1,8 @@
 <?php 
     if (isset($_GET['cerca'])){
         // App key
-    $client_id =     "d4c860fba30d49e5ad6cce24a046379b";
-    $client_secret = "5174c572bd624d8588ce342797b766a4";
+    $client_id =     "909e9433189e451c84d1d332f4732135";
+    $client_secret = "8055b758becc4ccd93b43cd35a8459c4";
 
     // Richiesta token
     $curl = curl_init();

@@ -82,6 +82,7 @@
     <head>
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/register.css">
+        <script src="js/register.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--<script src="js/register.js" defer></script>-->
         <link rel="preconnect" href="https://fonts.googleapis.com">

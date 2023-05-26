@@ -98,3 +98,4 @@ function removeModalHandler(event){
     event.currentTarget.classList.add("hidden");
     event.currentTarget.innerHTML = '';
 }
+

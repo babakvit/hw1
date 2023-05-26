@@ -117,6 +117,7 @@ input[type=submit].tastoPostaCommento:hover{
 
 .username_date{
     display: flex;
+    justify-content: space-between;
 }
 
 .username_date div{
@@ -142,6 +143,21 @@ input[type=submit].tastoPostaCommento:hover{
     display: none;
 }
 
+#comment_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.data_commento{
+    font-size: 0.5em;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.username_commento{
+    font-weight: bolder;
+    
+}
 
 
 @media (max-width: 400px){

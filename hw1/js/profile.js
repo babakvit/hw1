@@ -38,7 +38,7 @@ fetch("http://localhost/hw1/homework_gestione.php?choice=5").then(onResponse).th
 
 //CAMBIO DI FOTO PROFILO
 
-const form = document.forms['change_foto'];
+/*const form = document.forms['change_foto'];
 form.addEventListener('submit', cambioFoto);
 
 function cambioFoto(event){
@@ -48,4 +48,4 @@ function cambioFoto(event){
         alert("Non hai selezionato la foto");
         event.preventDefault();
     }
-}
+}*/

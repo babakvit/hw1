@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
         <script src="js/watchlist.js" defer></script>
+        <script src="js/general.js" defer></script>
     </head>
     <body>
         <nav>
@@ -17,6 +18,7 @@
             </div>
             <a href="homework_home.php">Home</a>
             <a href="homework_profile.php">Profilo</a>
+            <a href="homework_watchlist.php">Watchlist</a>
             <a href="homework_soundtrack.php">Soundtrack</a>
             <a href="homework_logout.php">Logout</a>
         </nav>
@@ -33,7 +35,8 @@
         </nav>
         <h1>La mia watchlist</h1>
         <article class="watchlist">
-           <div id="modal-view" class="hidden"></div> 
+            
         </article>
+        <div id="modal-view" class="hidden"></div>
     </body>
 </html>
