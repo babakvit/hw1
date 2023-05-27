@@ -41,6 +41,10 @@
     margin-top: 10px;
 }
 
+input[type=submit]{
+    font-size: 0.6em;
+}
+
 @media (max-width: 400px){
     h2{
         font-size: 20px;

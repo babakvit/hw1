@@ -35,7 +35,7 @@ input{
     margin-bottom: 8px;
   }
 
-  .name, .surname, .username, .email, .password, .confirm_password{
+.name, .surname, .username, .email, .password, .confirm_password, .submit{
     width: 400px;
     text-align: left;
     font-size: 18px;
@@ -56,6 +56,23 @@ input{
     border: 2px solid red;
 }
 
+.hidden{
+    display: none;
+}
+
+span{
+    color: red;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+div.error img{
+    height: 20px;
+    width: 20px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+}
+
 
 
 .submit input{
@@ -69,8 +86,6 @@ input{
     letter-spacing: 2px;
     color: black;
     background-color: whitesmoke;
-    transition-property: background-color;
-    transition-duration: .3s;
 }
 
 .submit input:hover{

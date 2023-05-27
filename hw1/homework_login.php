@@ -47,6 +47,7 @@
         
         <div class="space-creator">
             <div id="logo">Welcome to CinemaPortal</div>
+            <img src="images/popcorn.png" alt="">
         </div>
         <main><h4>Accedi al tuo account</h4>
         <form name="login_form" method="post" id="login_form">

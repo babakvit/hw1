@@ -38,6 +38,18 @@ article.watchlist{
     text-align: center;
 }
 
+.containerLikeComment{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+img.likeCommento{
+    height: 50px;
+    width: 50px;
+}
+
 /*STILE DELLA MODALE*/
 
 #modal-view{

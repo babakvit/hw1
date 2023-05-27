@@ -53,7 +53,7 @@
             $password = mysqli_real_escape_string($conn, $_POST['password']);
             //$password = password_hash($password, PASSWORD_BCRYPT);
 
-            $query = "INSERT INTO users(username, password, name, surname, email, profile_picture) VALUES('$username', '$password', '$name', '$surname', '$email', '$fileDestination')";
+            $query = "INSERT INTO users(username, password, name, surname, email, profile_picture) VALUES('$username', '$password', '$name', '$surname', '$email', null)";
             
             if (mysqli_query($conn, $query)) {
                 
@@ -97,43 +97,50 @@
         <section class="main_right">
             <h1>Iscriviti al portale CinemaPortal</h1>
             <form name='signup' method='post' enctype="multipart/form-data" autocomplete="off">
-                <div class="names">
                     <div class="name">
                         <label for='name'>Nome</label>
-                        <!-- Se il submit non va a buon fine, il server reindirizza su questa stessa pagina, quindi va ricaricata con 
-                            i valori precedentemente inseriti -->
                         <input type='text' name='name' <?php if(isset($_POST["name"])){echo "value=".$_POST["name"];} ?> >
+                        <div class="error hidden"><img src="images/errore.png" alt=""><span></span></div>
                     </div>
                     <div class="surname">
                         <label for='surname'>Cognome</label>
                         <input type='text' name='surname' <?php if(isset($_POST["surname"])){echo "value=".$_POST["surname"];} ?> >
+                        <div class="error hidden"><img src="images/errore.png" alt=""><span></span></div>
                     </div>
                 </div>
                 <div class="username">
                     <label for='username'>Nome utente</label>
                     <input type='text' name='username' <?php if(isset($_POST["username"])){echo "value=".$_POST["username"];} ?>>
-                    <?php if (isset($error['username'])) echo "<div class='errorj'><span>".$error['username']."</span></div>"; ?>
+                    <div class="error hidden"><img src="images/errore.png" alt=""><span></span></div>
                 </div>
                 <div class="email">
                     <label for='email'>Email</label>
                     <input type='text' name='email' <?php if(isset($_POST["email"])){echo "value=".$_POST["email"];} ?>>
-                    <?php if (isset($error['email'])) echo "<div class='errorj'><span>".$error['email']."</span></div>"; ?>
+                    <div class="error hidden"><img src="images/errore.png" alt=""><span></span></div>
                 </div>
                 <div class="password">
                     <label for='password'>Password</label>
                     <input type='password' name='password' <?php if(isset($_POST["password"])){echo "value=".$_POST["password"];} ?>>
-                    <?php if (isset($error['password'])) echo "<div class='errorj'><span>".$error['password']."</span></div>"; ?>
+                    <div class="error hidden"><img src="images/errore.png" alt=""><span></span></div>
                 </div>
                 <div class="confirm_password">
                     <label for='confirm_password'>Conferma Password</label>
                     <input type='password' name='confirm_password' <?php if(isset($_POST["confirm_password"])){echo "value=".$_POST["confirm_password"];} ?>>
-                    <?php if (isset($error['password'])) echo "<div class='errorj'><span>".$error['password']."</span></div>"; ?>
+                    <div class="error hidden"><img src="images/errore.png" alt=""><span></span></div>
                 </div>
                 <div class="allow"> 
                     <input type='checkbox' name='allow' value="1" <?php if(isset($_POST["allow"])){echo $_POST["allow"] ? "checked" : "";} ?>>
                     <label for='allow'>Accetto i termini e condizioni d'uso di CinemaPortal</label>
                 </div>
-                <?php if (isset($error['campi'])) echo "<div class='errorj'><span>".$error['campi']."</span></div>"; ?>
+                <div id="allow_err" class="error hidden"><img src="images/errore.png" alt=""><span></span></div>
+
+                <?php
+                    if (isset($error)){
+                        foreach($error as $elem){
+                            echo "<div class='error'>".$elem."</div>"; 
+                        }
+                    }
+                ?>
                 <div class="submit">
                     <input type='submit' value="Registrati" id="submit">
                 </div>

@@ -40,10 +40,10 @@
             </div>
         </nav>
         <form id="soundtrack_search" name="request_spotify_form">
-            <label>Cerca soundtrack dei film
+                <label for="cerca_sound">Cerca soundtrack del tuo film preferito</label>
                 <input type="text" name="cerca_sound">
                 <input type="submit" value="Cerca">
-            </label>
+            
         </form>
         <div class="container_sounds"></div>
     </body>

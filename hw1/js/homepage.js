@@ -6,18 +6,14 @@ function onResponse(response){
 }
 
 let j = 0;
-
+let k = 0;
 
 function onJson(json){
     console.log(json);
     for (let i = 0; i< MAX_LOAD; i++){
+        if (i + j >= json.length) break; 
+        k = i;
         const articolo = document.querySelector('article');
-
-        if (i + j >= json.length){
-            const trg = document.querySelector("expandText");
-            articolo.removeChild(trg);
-            return;
-        }
         
         //diachiarazione elementi
         const container = document.createElement('div');
@@ -94,8 +90,8 @@ function onJson(json){
         
     
     }
-
-    posizioneExpandText();
+    if (k + j < json.length) posizioneExpandText();
+    
 }
 
 fetch("http://localhost/hw1/homework_getfilms.php").then(onResponse).then(onJson);

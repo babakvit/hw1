@@ -159,6 +159,10 @@ input[type=submit].tastoPostaCommento:hover{
     
 }
 
+input[type=submit]{
+    font-size: 0.8em;
+}
+
 
 @media (max-width: 400px){
     nav{

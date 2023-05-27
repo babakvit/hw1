@@ -39,12 +39,13 @@ function gestioneOnClick(event){
     modalView.addEventListener('click', removeModalHandler);
 
     let information_to_add;
+    
     for (const elem of film_arr){
         if (elem.id_film === event.currentTarget.dataset.id_film){
             information_to_add = elem;
             break;
         }
-    }    
+    }  
     //qua creo il post da mettere sulla modale 
 
     //diachiarazione elementi
@@ -78,6 +79,25 @@ function gestioneOnClick(event){
     const imgText = document.createElement('div');
     imgText.classList.add("imgText");
 
+    //saasdasdnaksdkjas
+
+    const containerCommentoLike = document.createElement('div');
+    containerCommentoLike.classList.add("containerLikeComment");
+
+        
+        //creo l'icona con il like e aggiungo il listener
+        const like = document.createElement('img');
+        like.src = "images/elimina.png";
+        like.classList.add("likeCommento");
+        //aggiungo anche un dataset al container per identificare il post
+
+        like.dataset.id_film = information_to_add.id_film;
+        like.addEventListener('click', cancelHandler);
+
+        containerCommentoLike.appendChild(like);
+        
+
+
     //appendo le info di testo nell'aposito container
     info_container.appendChild(titolo);
     info_container.appendChild(genere);
@@ -88,6 +108,7 @@ function gestioneOnClick(event){
     imgText.appendChild(immagine_film);
     imgText.appendChild(info_container);
     container.appendChild(imgText);
+    container.appendChild(containerCommentoLike);
 
     modalView.appendChild(container);
 
@@ -98,4 +119,18 @@ function removeModalHandler(event){
     event.currentTarget.classList.add("hidden");
     event.currentTarget.innerHTML = '';
 }
+
+
+function cancelHandler(event){
+    //rimuovo il post dalla watchlist in database
+    
+    fetch("http://localhost/hw1/homework_gestione.php?id_film="+event.currentTarget.dataset.id_film +"&choice=2").then(onResponse).then(onJsonRemove);
+
+}
+
+function onJsonRemove(json){
+    location.reload(true);
+   
+}
+
 
