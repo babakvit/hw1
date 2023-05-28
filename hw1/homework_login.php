@@ -4,12 +4,11 @@
         header("Location: homework_home.php");
         exit;
     }
-    //se il cookie non è settato
-    //accedo al database
+    
     $conn = mysqli_connect("localhost", "root","", "homework1") or die(mysqli_connect_error());
-    //genero una query
+  
     $errore = array();
-    //controllo sull'username e password
+    
     if (isset($_POST["username"]) && isset($_POST["password"])){
         $username  = mysqli_real_escape_string($conn, $_POST['username']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);

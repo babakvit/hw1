@@ -1,7 +1,6 @@
 body{
     display: flex;
     flex-direction: column;
-    /*justify-content: space-around;*/
     align-items: center;
     background-color: rgb(16, 13, 13);
     opacity: 95%;
@@ -28,7 +27,6 @@ input[type=checkbox]{
     display: none;
 }
 
-/*PARTE NAV*/
 
 nav{
     height: 80px;
@@ -49,7 +47,7 @@ nav a{
 }
 
 nav a:hover{
-    border: 1px solid white;
+    background-color: rgb(63, 62, 62);
 }
 
 .nav_icon{
@@ -144,7 +142,6 @@ nav h1{
         background-color: rgb(109, 106, 106);
     }
 
-    /*FINE NAV MOBILE*/
 
     input[type=submit], input[type=text], input[type=password]{
         width: 380px;

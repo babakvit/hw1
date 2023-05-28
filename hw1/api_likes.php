@@ -1,9 +1,8 @@
 <?php 
    $conn = mysqli_connect("localhost", "root","", "homework1") or die(mysqli_connect_error());
    $eventi = array();
-   $username = $_GET['username'];
-   $query = "SELECT * FROM films WHERE id_film IN (SELECT id_film FROM likes WHERE username = '$username')";
-        //mysqli_query($conn, $query); 
+   $username = mysqli_real_escape_string($conn, $_GET['username']);
+   $query = "SELECT * FROM films WHERE id_film IN (SELECT id_film FROM likes WHERE username = '$username')"; 
    
    $res = mysqli_query($conn, $query);
    

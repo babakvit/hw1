@@ -12,29 +12,28 @@
         $conn = mysqli_connect("localhost", "root","", "homework1") or die(mysqli_error($conn));
 
         
-        # USERNAME
-        // Controlla che l'username rispetti il pattern specificato
+        
         if(!preg_match('/^[a-zA-Z0-9_]{1,15}$/', $_POST['username'])) {
             $error['username'] = "Username non valido";
 
         } else {
             $username = mysqli_real_escape_string($conn, $_POST['username']);
-            // Cerco se l'username esiste già o se appartiene a una delle 3 parole chiave indicate
+            
             $query = "SELECT username FROM users WHERE username = '$username'";
             $res = mysqli_query($conn, $query);
             if (mysqli_num_rows($res) > 0) {
                 $error['username'] = "Username già utilizzato";
             }
         }
-        # PASSWORD
+        
         if (strlen($_POST["password"]) < 8) {
             $error['password'] = "Caratteri password insufficienti";
         } 
-        # CONFERMA PASSWORD
+        
         if (strcmp($_POST["password"], $_POST["confirm_password"]) != 0) {
             $error['password'] = "Le password non coincidono";
         }
-        # EMAIL
+        
         if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $error['email'] = "Email non valida";
         } else {
@@ -45,7 +44,7 @@
             }
         }
 
-        # REGISTRAZIONE NEL DATABASE
+        
         if (count($error) == 0) {
             $name = mysqli_real_escape_string($conn, $_POST['name']);
             $surname = mysqli_real_escape_string($conn, $_POST['surname']);
@@ -84,7 +83,6 @@
         <link rel="stylesheet" href="css/register.css">
         <script src="js/register.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--<script src="js/register.js" defer></script>-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Source+Serif+Pro:ital,wght@1,700&display=swap" rel="stylesheet">

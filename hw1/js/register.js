@@ -27,7 +27,7 @@ function controllaCognome(event){
 
 function onResponse(response){
     if (response.ok) {
-        return response.json(); // Parsing the response as JSON
+        return response.json(); 
       } else {
         throw new Error('Request failed');
       }
@@ -53,9 +53,7 @@ function controllaUsername(event){
                 elem.classList.remove("hidden");
                 elem.querySelector("span").textContent = "Attenzione! Username deve rispettare il pattern";
               } else {
-                /*const elem = event.currentTarget.parentNode.querySelector("div");
-                elem.classList.add("hidden");
-                event.currentTarget.classList.remove("errore_input");*/
+                
                 const input = encodeURI(event.currentTarget.value);
                 fetch("http://localhost/hw1/homework_gestione.php?choice=6&username=" + input).then(onResponse).then(onUsernameCheck);
 
@@ -92,9 +90,7 @@ function controllaMail(event){
             elem.classList.remove("hidden");
             elem.querySelector("span").textContent = "Attenzione! La mail non è valida";
         } else {
-            /*const elem = event.currentTarget.parentNode.querySelector("div");
-            elem.classList.add("hidden");
-            event.currentTarget.classList.remove("errore_input");*/
+            
             const input = encodeURI(event.currentTarget.value);
             fetch("http://localhost/hw1/homework_gestione.php?choice=7&email=" + input).then(onResponse).then(onEmailCheck);
         }
