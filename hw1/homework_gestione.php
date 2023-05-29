@@ -9,6 +9,7 @@
                     $username = $_SESSION['username'];
                     $query = "INSERT INTO likes (id_film, username) VALUES ('$id_film', '$username')";
                     mysqli_query($conn, $query);
+
                 }
                 break;
             case "2":
@@ -27,8 +28,10 @@
                     $id_film = mysqli_real_escape_string($conn, $_GET['id_film']);
                     $username = $_SESSION['username'];
                     $text_of_comment = urldecode($_GET['text_mess']);
+                    $text_of_comment = mysqli_real_escape_string($conn, $text_of_comment);
                     $query = "INSERT INTO commenti (id_film, username, testo_commento, date_comment) VALUES ('$id_film', '$username', '$text_of_comment', current_timestamp())";
-                    mysqli_query($conn, $query);
+                    $res = mysqli_query($conn, $query);
+                    echo json_encode($res);
                 }
                 
                 break;
@@ -44,6 +47,7 @@
                     mysqli_free_result($res);
                     echo json_encode($eventi);
                 }
+                
                 break;
             case "5":
                 $username = mysqli_real_escape_string($conn, $_SESSION['username']);
@@ -71,6 +75,6 @@
             default: break;
         }
     }
-    
+    //mysqli_free_result($res);
     mysqli_close($conn);
 ?>

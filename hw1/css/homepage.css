@@ -92,7 +92,7 @@ h4{
 /*PARTE DEI COMMENTI*/
 
 .divLasciaCommento{
-    align-self: center;
+    align-self: flex-start;
 }
 
 .tastoPostaCommento{
@@ -137,6 +137,8 @@ input[type=submit].tastoPostaCommento:hover{
     background-color: rgb(53, 52, 52);
     margin: 5px 0 5px 0;
     padding: 3px;
+    align-self: flex-start;
+    border-radius: 5px;
 }
 
 .hidden{
@@ -146,11 +148,12 @@ input[type=submit].tastoPostaCommento:hover{
 #comment_form{
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
 }
 
 .data_commento{
-    font-size: 0.5em;
-    margin-top: 5px;
+    font-size: 0.8em;
+    margin-top: 2px;
     margin-left: 20px;
 }
 
@@ -163,6 +166,15 @@ input[type=submit]{
     font-size: 0.8em;
 }
 
+textarea{
+    border-radius: 5px;
+    font-family: Arial, Helvetica;
+}
+
+label.divLasciaCommento{
+    color:rgb(28, 28, 27);
+    font-weight: bold;
+}
 
 @media (max-width: 400px){
     nav{

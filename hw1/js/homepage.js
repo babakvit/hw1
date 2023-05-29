@@ -142,9 +142,15 @@ function commentHandler(event){
    //risalgo dall'immagine al container ovvero il parent node
    const container = event.currentTarget.parentNode.parentNode;
    //scritta lascia un commento
-   const leaveComment = document.createElement("div");
+
+   /*const leaveComment = document.createElement("div");
+   leaveComment.classList.add("divLasciaCommento");
+   leaveComment.textContent = "Lascia un commento";*/
+   const leaveComment = document.createElement("label");
+   leaveComment.setAttribute("for", "text");
    leaveComment.classList.add("divLasciaCommento");
    leaveComment.textContent = "Lascia un commento";
+   
 
    //creo il form
    const form = document.createElement("form");
@@ -173,6 +179,7 @@ function commentHandler(event){
    container.appendChild(leaveComment);
    container.appendChild(form);
   
+   console.log(event.currentTarget.parentNode.parentNode.dataset.id_film);  
    fetch("http://localhost/hw1/homework_gestione.php?id_film="+
     event.currentTarget.parentNode.parentNode.dataset.id_film + "&choice=4").then(onResponse).then(onJsonCaricaAltriCommenti);
 
@@ -211,7 +218,17 @@ function onJsonCaricaAltriCommenti(json){
     username.classList.add("username_commento");
 
     const date = document.createElement("div");
-    date.textContent = json[i].date_comment;
+
+    let dateString = json[i].date_comment;
+    let dateObj = new Date(dateString);
+
+    let year = dateObj.getFullYear();
+    let month = dateObj.getMonth() + 1;
+    let day = dateObj.getDate();
+
+    let formattedDate = year + "-" + month + "-" + day;
+    date.textContent = formattedDate;
+    //date.textContent = json[i].date_comment;
     date.classList.add("data_commento");
 
     const comment = document.createElement("p");
@@ -235,8 +252,14 @@ function onJsonCaricaAltriCommenti(json){
 function submitCommentHandler(event){
     const id_film = event.currentTarget.parentNode.dataset.id_film;
     const text = encodeURI(event.currentTarget.text.value);
-    fetch("http://localhost/hw1/homework_gestione.php?id_film="+id_film+"&text_mess="+text+"&choice=3");
+    fetch("http://localhost/hw1/homework_gestione.php?choice=3&id_film="+id_film+"&text_mess="+text).then(onResponse).then(onSubmitComment);
 
+    //id_film="+id_film+"&text_mess="+text+"&choice=3
+}
+
+function onSubmitComment(json){
+    console.log("1111111111");
+    console.log(json);
 }
 
 //Gestione nav mobile
